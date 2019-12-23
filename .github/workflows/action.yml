@@ -18,8 +18,8 @@ jobs:
         with:
           server_address: smtp.163.com
           server_port: 465
-          username: ${{ secrets.WEATHER_ACCESS_TOKEN }}
-          password: ${{ secrets.WEATHER_ACCESS_TOKEN }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD}}
           subject: Shenzhen Weather Report
           body: file://result.html
           to: gglanjian@gmail.com
