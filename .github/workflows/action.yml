@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v1
       - name: 'Get Result'
         run: bash ./weather.sh
-      - name: 'Send gmail'
+      - name: 'Send 163.com'
         uses: dawidd6/action-send-mail@master
         with:
           server_address: smtp.163.com
@@ -22,6 +22,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD}}
           subject: Shenzhen Weather Report
           body: file://result.html
-          to: gglanjian@gmail.com
+          to: gglanjian@163.com
           from: GitHub Actions
           content_type: text/html
