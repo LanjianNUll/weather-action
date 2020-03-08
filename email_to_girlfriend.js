@@ -173,7 +173,7 @@ function doubanMovie(){
         const $ = cheerio.load(html);
         let item = $('.ui-slide-item>ul>.poster>a>img');
         let item_a = $('.ui-slide-item>ul>.poster>a');
-        for(let i=0;i<10;i++){
+        for(let i=0;i<item.length;i++){
             global.data.doubanMovie.push({
                 title:item[i].attribs.alt,
                 img_src:item[i].attribs.src,
@@ -312,8 +312,8 @@ function sendEmail(emailAddress,html){
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user:'1234567890@qq.com',//这里填写你的qq邮箱
-            pass:'hnlpystnsfoohdia',//示例 qq邮箱smtp授权码 ！非密码 授权码需进qq邮箱手动获取
+            user:'765797511@qq.com',//这里填写你的qq邮箱
+            pass:'ggbqpycsggwgbccb',//示例 qq邮箱smtp授权码 ！非密码 授权码需进qq邮箱手动获取
         }
     });
     let mailOptions = {
