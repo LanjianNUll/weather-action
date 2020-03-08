@@ -11,17 +11,5 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      - name: 'Get Result'
-        run: bash ./weather.sh
-      - name: 'Send 163.com'
-        uses: dawidd6/action-send-mail@master
-        with:
-          server_address: smtp.163.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD}}
-          subject: Shenzhen Weather Report
-          body: file://result.html
-          to: gglanjian@163.com
-          from: GitHub Actions
-          content_type: text/html
+      - name: 'Start Work'
+        run: yarn build
