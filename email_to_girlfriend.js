@@ -119,8 +119,8 @@ function sendEmail(emailAddress,html){
     let mailOptions = {
         from:'gglanjian@foxmail.com ',//你的邮箱 与前面一致
         to:emailAddress,//对方邮箱
-        subject: '💌一封爱的小邮件在一起的 ${global.data.remenber.love} 天' ,  // Subject line 邮件标题
-        html: 'I LOVE YOU'
+        subject: `💌一封爱的小邮件在一起的 ${global.data.remenber.love} 天` ,  // Subject line 邮件标题
+        html: html
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if(error){
