@@ -92,11 +92,7 @@ function renderHtml(onOk,onErr){
         var html=`<p>${global.data.remenber.date}<span style="float:right">❤️ ${global.data.remenber.love} 天</span></p>
         <h2>在一起的 ${global.data.remenber.love} 天</h2>
         <h2>距离你的生日还有 ${global.data.remenber.birthday} 天</h2>
-        <div style="width:100%;text-align:center">
-        <div><em style="color:#424242">—————— ONE ——————</em></div>
-        <img style="width:80%;border-radius:5px;" src="${global.data.one.img_src}" />
         <div><em>${global.data.one.title}</em></div>
-        </div>
         <br />
         `;
         onOk&&onOk(html);
@@ -118,7 +114,7 @@ function sendEmail(emailAddress,html){
     let mailOptions = {
         from:'gglanjian@foxmail.com ',//你的邮箱 与前面一致
         to:emailAddress,//对方邮箱
-        subject: `💌一封爱的小邮件在一起的 ${global.data.remenber.love} 天` ,  // Subject line 邮件标题
+        subject: `💌一封爱的小邮件  在一起的 ${global.data.remenber.love} 天` ,  // Subject line 邮件标题
         html: html
     };
     transporter.sendMail(mailOptions, (error, info) => {
