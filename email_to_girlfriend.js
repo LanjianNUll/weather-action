@@ -87,17 +87,16 @@ function one(){
 function renderHtml(onOk,onErr){
     // console.log(JSON.stringify(global.data.wheather))
     // global.data.wheather;debugger
+    // <div style="width:100%;text-align:center">
+    //     <div><em style="color:#424242">—————— ONE ——————</em></div>
+    //     <img style="width:80%;border-radius:5px;" src="${global.data.one.img_src}" />
+    //     <div><em>${global.data.one.title}</em></div>
+    //     </div>
     try{
         //HTML
         var html=`<p>${global.data.remenber.date}<span style="float:right">❤️ ${global.data.remenber.love} 天</span></p>
         <h2>在一起的 ${global.data.remenber.love} 天</h2>
         <h2>距离你的生日还有 ${global.data.remenber.birthday} 天</h2>
-        <br />
-        <div style="width:100%;text-align:center">
-        <div><em style="color:#424242">—————— ONE ——————</em></div>
-        <img style="width:80%;border-radius:5px;" src="${global.data.one.img_src}" />
-        <div><em>${global.data.one.title}</em></div>
-        </div>
         <br />
         `;
         onOk&&onOk(html);
