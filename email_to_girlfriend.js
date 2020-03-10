@@ -92,7 +92,6 @@ function renderHtml(onOk,onErr){
         var html=`<p>${global.data.remenber.date}<span style="float:right">❤️ ${global.data.remenber.love} 天</span></p>
         <h2>在一起的 ${global.data.remenber.love} 天</h2>
         <h2>距离你的生日还有 ${global.data.remenber.birthday} 天</h2>
-        <div><em>${global.data.one.title}</em></div>
         <br />
         `;
         onOk&&onOk(html);
